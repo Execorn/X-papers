@@ -22,6 +22,7 @@ static void handle_events(winengine::VideoHandler* handler, sf::Event& ev) {
     auto video_render_obj = handler->getRenderer();
     if (ev.type == sf::Event::Closed || (ev.type == sf::Event::KeyPressed &&
                                          ev.key.code == sf::Keyboard::Escape)) {
+        video_render_obj.stop();
         handler->close();
     }
 

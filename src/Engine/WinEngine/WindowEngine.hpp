@@ -144,7 +144,7 @@ class WindowEngine {
 
    public:
     static WindowEngine& getInstance() {
-        [[clang::no_destroy]] static WindowEngine current_engine;
+        static WindowEngine current_engine;
         return current_engine;
     }
 

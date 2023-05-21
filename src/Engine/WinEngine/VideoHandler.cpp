@@ -86,6 +86,7 @@ void VideoHandler::start(
         m_renderwindow->display();
     }
 
+    m_renderer.stop();
     manager->closeDisplay();
 }
 
